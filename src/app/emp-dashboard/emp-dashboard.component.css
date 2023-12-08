@@ -26,14 +26,29 @@
     gap: 30px;
     text-transform: capitalize;
 }
+.elements div{
+    padding: 0 1vw;
+    border-radius: 5px;
+}
+.elements div:hover{
+    background-color: #b2e3ee;
+}
 .elements a{
     text-decoration: none;
     color: #000;
     font-weight: 400;
+    transition: all 0.3s ease;
+}
+.elements a:hover{
+    color: #f64c72;
+    text-decoration: underline;
 }
 .elements i{
     margin-right: 2vw;
 }
+
+
+
 #hero{
     width: 80%;
 }
@@ -57,9 +72,19 @@
     padding: 2vw;
 }
 .hero-top-elements div{
-    width: 12vw;
-    height: 10vw;
+    width: 15vw;
+    height: 7vw;
+    padding: .6vw 1vw;
     background-color: #fff;
+    color: #000;
+    display: flex;
+    gap: 10px;
+}
+.hero-top-elements div h2{
+    color: #888;
+}
+.hero-top-elements div i{
+    font-size: 1.8vw;
 }
 #hero-navbar{
     width: 100%;
