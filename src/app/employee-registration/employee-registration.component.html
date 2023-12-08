@@ -1,0 +1,187 @@
+<div *ngIf="flag_next==1">
+    <div class="row border ps-3 mb-3" style="height: 50px;">
+        This is Employee Registration
+        <br />
+        Basic Information
+    </div>
+    <div class="row g-3">
+        <div class="col-md-6">
+            <label class="form-label">First Name</label>
+            <input type="text" class="form-control" id="fname" [(ngModel)]="Employee.FirstName">
+        </div>
+        <div class="col-md-6">
+            <label class="form-label">Last Name</label>
+            <input type="text" class="form-control" id="lname" [(ngModel)]="Employee.LastName">
+        </div>
+        <div class="col-md-6">
+            <label class="form-label">Contact No.</label>
+            <input type="text" class="form-control" id="contact" [(ngModel)]="Employee.Contact">
+        </div>
+        <div class="col-md-2">
+            <label class="form-label ">Age</label>
+            <input type="text " class="form-control" id="contact" [(ngModel)]="Employee.Age">
+        </div>
+        <div class="col-md-4">
+            <label class="form-label ">Date Of Birth</label>
+            <input type="date" class="form-control" id="contact" [(ngModel)]="Employee.DateOfBirth">
+        </div>
+        <div class="col-md-12">
+            <label for="inputEmail" class="form-label">Email</label>
+            <input type="email" class="form-control" id="inputEmail" [(ngModel)]="Employee.Email">
+        </div>
+        <!-- <div class="col-md-6">
+        <label for="inputPassword" class="form-label">Password</label>
+        <input type="password" class="form-control" id="inputPassword">
+      </div> -->
+        <div class="col-12">
+            <label for="inputAddress" class="form-label">Address</label>
+            <input type="text" class="form-control" id="inputAddress" [(ngModel)]="Employee.Address">
+        </div>
+        <div class="col-md-6">
+            <label for="inputCity" class="form-label">City</label>
+            <input type="text" class="form-control" id="inputCity" [(ngModel)]="Employee.City">
+        </div>
+        <div class="col-md-4">
+            <label for="inputState" class="form-label">State</label>
+            <select id="inputState" class="form-select" [(ngModel)]="Employee.State">
+                <option selected>Gujarat</option>
+                <option>MP</option>
+                <option>UP</option>
+            </select>
+        </div>
+        <div class="col-md-2">
+            <label for="inputZip" class="form-label">Zip</label>
+            <input type="text" class="form-control" id="inputZip" [(ngModel)]="Employee.Zip">
+        </div>
+        <div class="col text-center">
+            <button type="" class="btn btn-primary m-2" (click)="nextpageto2()">Next</button>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="flag_next==2">
+    <div class="row border ps-3 mb-3" style="height: 50px;">
+        This is Employee Registration
+        <br />
+        Designation Information
+    </div>
+    <div class="row g-3">
+        <div class="col-md-6">
+            <label class="form-label">Designation</label>
+            <input type="text" class="form-control" id="fname" [(ngModel)]="Employee.Designation">
+        </div>
+        <div class="col-6"></div>
+        <div class="col-md-6">
+            <label class="form-label">Shift</label>
+            <input type="text" class="form-control" id="lname" [(ngModel)]="Employee.Shift">
+        </div>
+        <div class="col-6"></div>
+        <div class="col-md-6">
+            <label class="form-label">Experience</label>
+            <input type="text" class="form-control" id="lname" [(ngModel)]="Employee.Experience">
+        </div>
+        <div class="col-6"></div>
+        <div class="col text-center">
+            <button type="" class="btn btn-primary m-2" (click)="prevto1()">previous</button>
+            <button type="" class="btn btn-primary m-2" (click)="nextpageto3()">Next</button>
+        </div>
+
+    </div>
+</div>
+
+<div *ngIf="flag_next==3">
+    <div class="row border ps-3 mb-3" style="height: 50px;">
+        This is Employee Registration
+        <br />
+        Salary Information
+    </div>
+    <div class="row g-3">
+        <div class="col-md-6">
+            <label class="form-label">Salary</label>
+            <input type="text" class="form-control" id="fname" [(ngModel)]="Employee.Salary"/>
+        </div>
+        <div class="col-6"></div>
+        <div class="col-md-4">
+            <label class="form-label">Basic</label>
+            <input type="text" class="form-control" id="lname" [(ngModel)]="Employee.Basic">
+        </div>
+        <div class="col-md-4">
+            <label class="form-label">HRA</label>
+            <input type="text" class="form-control" id="lname" [(ngModel)]="Employee.HRA">
+        </div>
+        <div class="col-md-4">
+            <label class="form-label">DA</label>
+            <input type="text" class="form-control" id="lname" [(ngModel)]="Employee.DA">
+        </div>
+        <div class="col-md-4">
+            <label class="form-label">TDS</label>
+            <input type="text" class="form-control" id="lname" [(ngModel)]="Employee.TDS">
+        </div>
+        <div class="col-md-4">
+            <label class="form-label">PF</label>
+            <input type="text" class="form-control" id="lname" [(ngModel)]="Employee.PF">
+        </div>
+        <div class="col-4"></div>
+        <div class="col text-center">
+            <button type="" class="btn btn-primary m-2" (click)="prevto2()">previous</button>
+            <button type="" class="btn btn-primary m-2" (click)="nextpageto4()">Next</button>
+        </div>
+
+    </div>
+</div>
+
+<div *ngIf="flag_next==4">
+    <div class="row border ps-3 mb-3" style="height: 50px;">
+        This is Employee Registration
+        <br />
+        Leave Information
+    </div>
+    <div class="row g-3">
+        <div class="col-md-6">
+            <label class="form-label">Total Leaves</label>
+            <input type="text" class="form-control" id="fname" [(ngModel)]="Employee.TotalLeaves"/>
+        </div>
+        <div class="col-6"></div>
+        <div class="col-md-4">
+            <label class="form-label">Casual Leaves</label>
+            <input type="text" class="form-control" id="lname" [(ngModel)]="Employee.CasualLeaves">
+        </div>
+        <div class="col-md-4">
+            <label class="form-label">Seek Leaves</label>
+            <input type="text" class="form-control" id="lname" [(ngModel)]="Employee.SeekLeaves">
+        </div>
+        <div class="col-md-4">
+            <label class="form-label">Paid Leaves</label>
+            <input type="text" class="form-control" id="lname" [(ngModel)]="Employee.PaidLeaves">
+        </div>
+        <div class="col text-center">
+            <button type="" class="btn btn-primary m-2" (click)="prevto3()">previous</button>
+            <button class="btn btn-primary m-2" (click)="nextpageto5()">Next</button>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="flag_next==5">
+    <div class="row border ps-3 mb-3" style="height: 50px;">
+        This is Employee Registration
+        <br />
+        Generate Username and Password
+    </div>
+    <div class="row g-3">
+        <div class="col-md-6">
+            <label class="form-label">Username</label>
+            <input type="text" class="form-control" id="fname" [(ngModel)]="Employee.Username"/>
+        </div>
+        <div class="col-6"></div>
+        <div class="col-md-6">
+            <label class="form-label">Password</label>
+            <input type="text" class="form-control" id="lname" [(ngModel)]="Employee.Password">
+        </div>
+        <div class="col-md-6"></div>
+        <div class="col text-center">
+            <button type="" class="btn btn-primary m-2" (click)="prevto4()">previous</button>
+            <button class="btn btn-primary m-2" (click)="addEmployee()">Submit</button>
+        </div>
+
+    </div>
+</div>
